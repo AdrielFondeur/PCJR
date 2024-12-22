@@ -1,0 +1,118 @@
+/* ESTILOS GENERALES DE LA WEBSITE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* CSS | QUIENES.HTML */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* CAJA GENERAL | CONTENEDOR DEL MENÚ */
+.navbar{
+    display: flex; /* Alineo todos los elementos que están dentro del DIV NAVBAR*/
+    justify-content: space-between; /* Distribuye los ele mentos del content con espacio entre ellos */
+    align-items: center; /* Alinea verticalmeente los elementos */
+    padding: 10px 25px; /* Espaciado interno del contenedor */
+    background-color: white; /*Fondo blanco*/
+    box-shadow: 0 6px 4px rgb(0, 0, 0, 0.2); /* Sombra para destacar el menú en el borde inferior */
+}
+
+/* LOGO | PCJR PROJECT | DIV INTERNO DENTRO DE NAVBAR */
+.logo img{
+    width: 350px;
+    height: auto;
+}
+
+/* Lista de ENLACES | NAV-LINKS | DIV INTERNO DENTRO DE NAVBAR */
+.nav-links{
+    list-style: none; /* Remover los puntos de cada link*/
+    display: flex; /* Flex box alinea los elementos horizontalmente */
+    gap: 20px; /* Espaciado entre cada enlace*/
+}
+
+/* Estilo de los enlaces que están dentro de <li><a>...</a></li> */
+.nav-links a {
+    text-decoration: none; /* Remover UNDERLINE en cada texto con link */
+    color: #333; /* Establece color a las letras*/
+    font-weight: none; /* Establece si las letras irán BOLD , Italic or normals */
+    font-size: 16px; /* Tamaño de las letras */
+    transition: color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto HOVER en los enlaces */
+.nav-links a:hover{
+    color: #006400; /* Cambia el color a verde oscuro al pasar el cursor*/
+}
+
+/* Botón de Iniciar Sesión */
+.login-button button{
+    background-color: #006400; /* Color del background del botón */
+    color: white; /* Color de las letras*/
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espacio interno del botón*/
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño del texto */
+    transition: background-color 0.3 ease; /* Transición para el efecto HOVER*/ 
+}
+
+/* EFECTO HOVER DEL BOTÓN DE INICIAR SESIÓN */
+.login-button button:hover{
+background-color: #004d00; /* Verde más oscuro para el efecto hover */
+}
+
+/* HEADER HERO */
+.hero{
+    background: url('../images/DSC_0621.JPG') center/cover no-repeat;  /* Imagen de Fondo*/
+    height: 450px; /* Altura de la imagen | 400px */
+    display: flex; /* FLEXBOX que centra el contenido*/
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente*/
+    color: white; /* Color de texto */
+    font-size: 2.2rem; /* Tamaño del texto en unidades diferentes a PX*/
+    font-weight: none; /* Establece si las letras irán BOLD , Italic or normals */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Para poder posicionar el listón dorado encima */
+}
+
+/* LISTÓN DORADO EN MOVIMIENTO */
+.gold-wave{
+    position: absolute; /* Posiciona el listón relativo al HEADER*/
+    top: 0; /* Coloca el listón al final del header*/
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to left, rgba(255, 217, 0, 0.603), transparent);
+    animation: wave 4s infinite ease-in-out;
+}
+
+/* LISTÓN DORADO EN MOVIMIENTO */
+.gold-wave2{
+    position: absolute; /* Posiciona el listón relativo al HEADER*/
+    bottom: 0; /* Coloca el listón al final del header*/
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, rgba(255, 217, 0, 0.603), transparent);
+    animation: wave 4s infinite ease-in-out;
+}
+
+
+/* Animación del listón dorado */
+@keyframes wave {
+    0% { transform: translate(0); }
+    50% { transform: translate(-50%); }
+    100% { transform: translate(0); }
+}
+
+
+
+
+
