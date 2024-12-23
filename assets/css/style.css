@@ -36,7 +36,7 @@ body{
 .nav-links{
     list-style: none; /* Remover los puntos de cada link*/
     display: flex; /* Flex box alinea los elementos horizontalmente */
-    gap: 20px; /* Espaciado entre cada enlace*/
+    gap: 25px; /* Espaciado entre cada enlace*/
 }
 
 /* Estilo de los enlaces que están dentro de <li><a>...</a></li> */
@@ -44,7 +44,7 @@ body{
     text-decoration: none; /* Remover UNDERLINE en cada texto con link */
     color: #333; /* Establece color a las letras*/
     font-weight: none; /* Establece si las letras irán BOLD , Italic or normals */
-    font-size: 16px; /* Tamaño de las letras */
+    font-size: 20px; /* Tamaño de las letras */
     transition: color 0.3s ease; /* Transición para el efecto hover */
 }
 
@@ -52,6 +52,7 @@ body{
 .nav-links a:hover{
     color: #006400; /* Cambia el color a verde oscuro al pasar el cursor*/
 }
+
 
 /* Botón de Iniciar Sesión */
 .login-button button{
@@ -72,47 +73,131 @@ background-color: #004d00; /* Verde más oscuro para el efecto hover */
 
 /* HEADER HERO */
 .hero{
-    background: url('../images/DSC_0621.JPG') center/cover no-repeat;  /* Imagen de Fondo*/
-    height: 450px; /* Altura de la imagen | 400px */
+    position: relative; /* Para poder posicionar el listón dorado encima */
+    height: 480px; /* Altura de la imagen | 400px */
     display: flex; /* FLEXBOX que centra el contenido*/
+    flex-direction: column;
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: center; /* Centra horizontalmente*/
+    overflow: hidden;
     color: white; /* Color de texto */
     font-size: 2.2rem; /* Tamaño del texto en unidades diferentes a PX*/
-    font-weight: none; /* Establece si las letras irán BOLD , Italic or normals */
+    font-weight: bold; /* Establece si las letras irán BOLD , Italic or normals */
     text-align: center; /* Centra el texto */
-    position: relative; /* Para poder posicionar el listón dorado encima */
 }
 
-/* LISTÓN DORADO EN MOVIMIENTO */
-.gold-wave{
-    position: absolute; /* Posiciona el listón relativo al HEADER*/
-    top: 0; /* Coloca el listón al final del header*/
+
+
+/* Texto principal */
+.hero h1 {
+    position: absolute;
+    z-index: 5; /* Asegura que esté encima del carrusel */
+    font-weight: bold;
+    font-size: 4.2rem;
+    text-align: center;
+}
+
+/* Estilos para la capa transparente */
+.overlay {
+    position: absolute; /* Posiciona el overlay encima del carrusel */
+    top: 0; /* Comienza desde la parte superior */
+    left: 0; /* Comienza desde el lado izquierdo */
+    width: 100%; /* Ocupa el ancho completo del carrusel */
+    height: 100%; /* Ocupa el alto completo del carrusel */
+    background: rgba(0, 0, 0, 0.635); /* Negro con 50% de opacidad */
+    z-index: 1; /* Detrás del texto pero delante del carrusel */
+    pointer-events: none; /* Permite que los eventos pasen al carrusel directamente*/
+}
+
+
+/* Carrusel */
+.carousel {
+    position: absolute;
     width: 100%;
-    height: 20px;
-    background: linear-gradient(to left, rgba(255, 217, 0, 0.603), transparent);
-    animation: wave 4s infinite ease-in-out;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Detrás del texto */
 }
 
-/* LISTÓN DORADO EN MOVIMIENTO */
-.gold-wave2{
-    position: absolute; /* Posiciona el listón relativo al HEADER*/
-    bottom: 0; /* Coloca el listón al final del header*/
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(to right, rgba(255, 217, 0, 0.603), transparent);
-    animation: wave 4s infinite ease-in-out;
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-out;
 }
 
-
-/* Animación del listón dorado */
-@keyframes wave {
-    0% { transform: translate(0); }
-    50% { transform: translate(-50%); }
-    100% { transform: translate(0); }
+.carousel-images img {
+    min-width: 100%;
+    height: 480px;
+    object-fit: cover;
 }
 
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    z-index: 2; /* Encima del carrusel */
+    padding: 10px;
+    font-size: 1.5rem;
+}
 
+.carousel-btn.left {
+    left: 10px;
+}
 
+.carousel-btn.right {
+    right: 10px;
+}
 
+/* Listón dorado animado | Top */
+.gold-wave {
+    position: absolute;
+    top: 0; /* Posicionado en la parte superior del carrusel */
+    left: -100%; /* Comienza fuera del carrusel desde la izquierda */
+    width: 200%; /* Asegura que tenga suficiente ancho para cubrir su recorrido */
+    height: 15px;
+    background: linear-gradient(to right, rgba(255, 217, 0, 0.6), transparent);
+    animation: wave-top 12s linear infinite; /* Animación */
+    z-index: 4; /* Delante del texto */
+}
+
+/* Animación para gold-wave en el top */
+@keyframes wave-top {
+    0% {
+        transform: translateX(100%); /* Comienza desde la esquina superior derecha */
+    }
+    50% {
+        transform: translateX(0); /* Llega a cubrir el carrusel completamente */
+    }
+    100% {
+        transform: translateX(100%); /* Se devuelve hacia la esquina superior derecha */
+    }
+}
+
+/* Listón dorado animado | Bottom */
+.gold-wave2 {
+    position: absolute;
+    bottom: 0; /* Posicionado en la parte inferior del carrusel */
+    left: -100%; /* Comienza fuera del carrusel desde la izquierda */
+    width: 200%; /* Asegura que tenga suficiente ancho para cubrir su recorrido */
+    height: 15px;
+    background: linear-gradient(to left, rgba(255, 217, 0, 0.6), transparent);
+    animation: wave-bottom 12s linear infinite; /* Animación */
+    z-index: 4; /* Delante del texto */
+}
+
+/* Animación para gold-wave en el bottom */
+@keyframes wave-bottom {
+    0% {
+        transform: translateX(-100%); /* Comienza desde la esquina inferior izquierda */
+    }
+    50% {
+        transform: translateX(0); /* Llega a cubrir el carrusel completamente */
+    }
+    100% {
+        transform: translateX(-100%); /* Se devuelve hacia la esquina inferior izquierda */
+    }
+}
 
