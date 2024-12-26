@@ -78,3 +78,78 @@ carouselImages.addEventListener('mousemove', (e) => {
         isDragging = false;
     }
 });
+
+
+//SCROLL AREA | MISION , VISION Y VALORES
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".scroll-item");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+  
+    items.forEach((item) => {
+      observer.observe(item);
+    });
+  });
+  
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".scroll-item");
+    const titles = document.querySelectorAll(".text h2");
+    const paragraphs = document.querySelectorAll(".text p");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = "running";
+                    
+                    // Activar animación de títulos
+                    if (entry.target.querySelector("h2")) {
+                        const title = entry.target.querySelector("h2");
+                        title.querySelectorAll("span").forEach((letter, index) => {
+                            letter.style.setProperty("--index", index);
+                        });
+                    }
+
+                    // Activar animación de párrafos
+                    if (entry.target.querySelector("p")) {
+                        entry.target.querySelector("p").style.animationPlayState = "running";
+                    }
+                }
+            });
+        },
+        {
+            threshold: 0.3,
+        }
+    );
+
+    items.forEach((item) => {
+        observer.observe(item);
+    });
+
+    titles.forEach((title) => {
+        const text = title.textContent;
+        title.innerHTML = "";
+        text.split("").forEach((letter) => {
+            const span = document.createElement("span");
+            span.textContent = letter;
+            title.appendChild(span);
+        });
+    });
+});
+
+
+

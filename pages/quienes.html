@@ -6,6 +6,8 @@
     <title>PCJR PROJECT | QUIENES SOMOS</title>
     <!-- Vinculación con Archivo CSS -->
      <link rel="stylesheet" href="../assets/css/style.css">
+     <!-- Vinculación con librería de JS para el SCROLL -->
+     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
     <!-- Contenedor de navegación -->
@@ -16,18 +18,18 @@
         </div>
         <!-- Lista de enlaces del menú -->
          <ul class="nav-links">
-            <li><a href="">Inicio</a></li>
+            <li><a href="../index.html">Inicio</a></li>
             <li><a href="">Nosotros</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href="">FAQ</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Nueva Funeraria</a></li>
          </ul>
-
-        <!-- BOTÓN DE INICIO DE SESIÓN -->
-         <div class="login-button">
-            <button>Iniciar Sesión</button>
-         </div>
+         <!-- WHATSAPP -->
+         <a href="https://wa.me/8293451020" target="_blank" class="whatsapp-button">
+          <span>Whatsapp</span>
+          <i class="icon">↗</i>
+      </a>
     </nav>
 
     <!-- HEADER | HERO AREA | IMAGEN Y TEXTO -->
@@ -46,11 +48,58 @@
             <button class="carousel-btn right">&#9654;</button>
         </div>
         <!-- TEXTO PRINCIPAL CARRUSEl -->
-         <h1>Descubre más sobre nosotros</h1>
+        <h1 class="svg-wrapper">
+            <svg height="80" width="100" xmlns="http://www.w3.org/2000/svg">
+              <rect class="shape" height="100" width="800" />
+            </svg>
+            <span class="text">DESCUBRE SOBRE NOSOTROS</span>
+          </h1>
         <!-- Listón dorado animado | SUPERIOR E INFERIOR  -->
          <div class="gold-wave"></div>
          <div class="gold-wave2"></div>
     </header>
+
+
+
+
+    <!-- SECCIÓN DEL SCROLL | MISION , VISION Y VALORES -->
+    <section id="scroll-section">
+    <div class="overlay-quienes"></div>
+      <div class="scroll-container">
+        <!-- Misión Section -->
+        <div class="scroll-item">
+          <!-- CONTENEDOOR IZQUIERDO DE CÍRCULO -->
+          <div class="circle left">
+            <img src="../assets/images/DSC_0621.JPG" alt="Misión">
+          </div>
+          <!--  -->
+          <div class="text right">
+            <h2>Misión</h2>
+            <p>
+              Ofrecer a todas las familias de República Dominicana un plan de previsión familiar
+              accesible, confiable y asequible, asegurando paz y respaldo en los momentos más difíciles.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Visión Section -->
+        <div class="scroll-item">
+          <div class="circle right">
+            <img src="../assets/images/DJI_0288.JPG" alt="Visión">
+          </div>
+          <div class="text left">
+            <h2>Visión</h2>
+            <p>
+              Ser el referente en servicios funerarios, con instalaciones modernas y sostenibles,
+              un equipo comprometido con la excelencia en la atención y un profundo respeto hacia
+              las familias y el medio ambiente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
 
     <!-- Vinculación con el archivo de JavaScript -->
     <script src="../assets/js/script.js"></script>
