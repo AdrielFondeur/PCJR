@@ -151,5 +151,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Funcionalidad para el botón de menú
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Animaciones para la sección "Nuestra Historia"
+document.addEventListener("DOMContentLoaded", () => {
+    const title = document.querySelector(".title-own-history");
+    const circle = document.querySelector(".history-circle");
+    const paragraphs = document.querySelectorAll(".history-text p");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    title.style.opacity = 1;
+                    title.style.transform = "translateY(0)";
+                    circle.style.opacity = 1;
+                    circle.style.transform = "translateX(0)";
+                    paragraphs.forEach((p, index) => {
+                        setTimeout(() => {
+                            p.style.opacity = 1;
+                            p.style.transform = "translateX(0)";
+                        }, index * 200);
+                    });
+                } else {
+                    title.style.opacity = 0;
+                    title.style.transform = "translateY(-50px)";
+                    circle.style.opacity = 0;
+                    circle.style.transform = "translateX(-100px)";
+                    paragraphs.forEach((p, index) => {
+                        setTimeout(() => {
+                            p.style.opacity = 0;
+                            p.style.transform = "translateX(100px)";
+                        }, index * 200);
+                    });
+                }
+            });
+        },
+        {
+            threshold: 0.3,
+        }
+    );
+
+    observer.observe(document.querySelector(".own-history-section"));
+});
+
 
 
