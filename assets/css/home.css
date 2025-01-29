@@ -598,6 +598,9 @@ footer{
  --myColor3: #ffdb98;
 }
 
+
+
+
 .what-we-offer button:not(:hover){
   background: linear-gradient(var(--myColor1), var(--myColor2));
  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
