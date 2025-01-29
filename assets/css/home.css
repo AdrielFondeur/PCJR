@@ -11,7 +11,7 @@
 }
 
 html{
-  font-size: 12pt;
+  font-size: 16px;
   font-family: "Playfair Display", serif;
 }
 
@@ -185,7 +185,6 @@ nav svg{
   font-weight: 400;
 }
 .sec1 button{
-  font-size: 18px;
   font-family: "Playfair Display", serif;
   background-color: #43b248;
   color: white;
@@ -352,6 +351,13 @@ footer{
 .section {
   padding: 50px 20px;
   text-align: center;
+  background-color: rgb(245, 245, 245);
+}
+
+.contact{
+  padding: 0px 0px;
+  padding-bottom: 40px;
+
 }
 .section h2 {
   font-size: 2em;
@@ -362,7 +368,7 @@ footer{
 
 }
 .section p {
-  font-size: 1.1em;
+  font-size: 16px;
   color: #666;
 }
 
@@ -400,14 +406,22 @@ footer{
   padding-bottom: 20px;
 }
 
+.what-we-offer h3{
+  margin-bottom: 6px;
+}
+
 .feature h3{
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  
 }
 
 .feature, .offer {
 
   border-radius: 10px;
-  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 300px;
 
 }
@@ -426,8 +440,12 @@ footer{
 
 .offer img{
   font-size: 2em;
+  height: 300px;
   color: #4CAF50;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  width: auto;
 }
 .offer img {
   width: 100%;
@@ -441,26 +459,53 @@ footer{
 }
 .contact iframe {
   width: 100%;
-  height: 400px;
+  height: 440px;
   object-fit: cover;
 }
 .contact-form {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 100px;
   transform: translateY(-50%);
   background-color: white;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
 }
 .contact-form h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-family: "Lato", serif;
 }
+
+.contact-form input {
+  font-family: "Lato", serif;
+  
+  
+}
+.contact-form input[type="text"] {
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.contact-form input[type="email"] {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+
+.contact-form textarea {
+  font-family: "Lato", serif;
+  box-sizing: border-box;
+  padding-left: 10px;
+  resize: none;
+}
+
+
 .contact-form input, .contact-form textarea, .contact-form select {
   width: 100%;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -487,7 +532,7 @@ footer{
   margin: 0 auto;
 }
 .testimonials .testimonial p {
-  font-size: 1em;
+  font-size: 14px;
 }
 .testimonials .testimonial h4 {
   margin-top: 10px;
@@ -510,6 +555,10 @@ footer{
 .testimonials .carousel::-webkit-scrollbar {
   display: none;
 }
+
+
+
+
 @media (max-width: 768px) {
   .why-choose-us .features, .what-we-offer .offers {
       flex-direction: column;
@@ -524,4 +573,36 @@ footer{
       flex-direction: column;
       align-items: center;
   }
+}
+
+.what-we-offer button{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  background-color: #43b248;
+  color: white;
+
+  border: unset;
+  border-radius: 20px;
+  padding: 10px 34px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.what-we-offer button:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+ --myColor1: #43b248;
+ --myColor2: #d4b757;
+ --myColor3: #ffdb98;
+}
+
+.what-we-offer button:not(:hover){
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+}
+
+.testimonials h2{
+  margin-bottom: 30px;
 }
