@@ -600,7 +600,7 @@ text-align: left;
 .what-we-offer button{
   margin-top: 40px;
   margin-bottom: 30px;
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", serif;
   background-color: #43b248;
   color: white;
 
@@ -620,9 +620,6 @@ text-align: left;
  --myColor3: #ffdb98;
 }
 
-
-
-
 .what-we-offer button:not(:hover){
   background: linear-gradient(var(--myColor1), var(--myColor2));
  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
@@ -631,4 +628,3 @@ text-align: left;
 .testimonials h2{
   margin-bottom: 30px;
 }
-
