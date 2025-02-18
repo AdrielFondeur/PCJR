@@ -8,173 +8,175 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Vinculación con librexría de JS para el SCROLL -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <!-- Contenedor de navegación -->
-    <nav>
-        <input type="checkbox" id="sidebar-active">
-        <label for="sidebar-active" class="open-sidebar-button">
-            <svg xmlns="" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-        </label>
-        <label id="overlay" for="sidebar-active"></label>
-        <div class="links-container">
-            <label for="sidebar-active" class="close-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            </label>
-            <a class="home-link" href="index.html"><img class="navimg" src="../assets/images/Logo.png"></a> 
-            <a class="link" href="about.html">Nosotros</a> 
-            <a class="link" href="products.html">Servicios</a>
-            <a class="link" href="blog.html">FAQ</a>
-            <a class="link" href="login.html">Blog</a>
-            <a class="link" href="login.html">Nueva Funeraria</a>
-            <a class="login-link link" href="login.html">WhatsApp</a>
-        </div>
-        <!-- Botón de menú para pantallas pequeñas -->
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-
-    <!-- HEADER | HERO AREA | IMAGEN Y TEXTO -->
-    <header class="hero">
-        <!-- Carrusel -->
-        <div class="carousel">
-                <div class="carousel-images">
-                    <img src="../assets/images/DSC_0621.JPG" alt="Imagen 1">
-                    <img src="../assets/images/DSC_0626.JPG" alt="Imagen 2">
-                    <img src="../assets/images/DSC_0636.JPG" alt="Imagen 3">
+  <header class="bg-white shadow-md relative z-50">
+    <div class="container mx-auto flex justify-between items-center py-2 px-6">
+        <img src="../assets/images/Logo.png" alt="Logo of Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding"/>
+        
+        <nav class="navpadding2 hidden md:flex items-center space-x-6">
+            <a href="../index.html" class="text-gray-700 hover:text-green-500">Inicio</a>
+            <div class="relative group">
+                <a href="#" class="text-gray-700 hover:text-green-500">Nosotros</a>
+                <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <a href="../pages/quienes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quienes Somos?</a> 
+                    <a href="../pages/planes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+                    <a href="../pages/obi.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+                    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
                 </div>
-            <!-- CAPA NEGRA TRANSPARENTE -->
-            <div class="overlay"></div>
-            <!-- BOTONES | RIGHT AND LEFT | CARRUSEL -->
-            <button class="carousel-btn left">&#9664;</button>
-            <button class="carousel-btn right">&#9654;</button>
-        </div>
-        <!-- TEXTO PRINCIPAL CARRUSEl -->
-        <h1 class="svg-wrapper">
-            <svg height="80" width="100" xmlns="http://www.w3.org/2000/svg">
-              <rect class="shape" height="100" width="800" />
-            </svg>
-            <span class="text">DESCUBRE SOBRE NOSOTROS</span>
-          </h1>
-        <!-- Listón dorado animado | SUPERIOR E INFERIOR  -->
-        <div class="gold-wave"></div>
-        <div class="gold-wave2"></div>
-    </header>
-
-
-
-
-    <!-- SECCIÓN DEL SCROLL | MISION , VISION Y VALORES -->
-    <section id="scroll-section">
-    <!-- <div class="overlay-quienes"></div> -->
-      <div class="scroll-container">
-      <!-- Misión Section -->
-      <div class="scroll-item">
-        <!-- CONTENEDOOR IZQUIERDO DE CÍRCULO -->
-        <div class="circle left">
-        <img src="../assets/images/DSC_0621.JPG" alt="Misión">
-        </div>
-        <!--  -->
-        <div class="text right">
-        <h2>Misión</h2>
-        <p>
-          Ofrecer a todas las familias de República Dominicana un plan de previsión familiar
-          accesible, confiable y asequible, asegurando paz y respaldo en los momentos más difíciles.
-        </p>
-        </div>
-      </div>
-    
-      <!-- Visión Section -->
-      <div class="scroll-item">
-        <div class="circle right">
-        <img src="../assets/images/DJI_0288.JPG" alt="Visión">
-        </div>
-        <div class="text left">
-        <h2>Visión</h2>
-        <p>
-          Ser el referente en servicios funerarios, con instalaciones modernas y sostenibles,
-          un equipo comprometido con la excelencia en la atención y un profundo respeto hacia
-          las familias y el medio ambiente.
-        </p>
-        </div>
-      </div>
-      </div>
-    </section>
-
-
-    <section class="own-history-section">
-      <div class="own-history">
-        <h2 class="title-own-history">Nuestra Historia</h2>
-        <div class="history-content">
-          <div class="circle history-circle">
-            <img src="../assets/images/DSC_0621.JPG" alt="Nuestra Historia">
-          </div>
-          <div class="history-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus, voluptatem vitae quos autem asperiores animi non modi facere cumque voluptatum repudiandae quia perferendis vel suscipit ad maxime. Ab, eligendi!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia natus necessitatibus earum ullam, culpa est, tempore, deleniti doloremque delectus vero iste incidunt illum assumenda voluptates sunt! Doloribus, error quam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, iure! Aliquam eius veniam dolorem molestiae commodi harum vitae odit voluptas eveniet quia quisquam ipsam mollitia, quis saepe sequi perferendis similique.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="footercontent">
-        <img class="footerimg" src="../assets/images/Emblema_ODS_block (PNG).png"/>
-        <div class="footerlist1">
-          <span>Inicio</span>
-          <span>FAQ</span>
-          <span>Blog</span>
-          <span>Empleos</span>
-          <span>Iniciar Sesion</span>
-          <span>Registrate</span>
-        </div>
-        <div class="footerlist2">
-          <span>Sobre Nosotros</span>
-          <span>Cuentas<br>Bancarias</span>
-          <span>Afiliarse</span>
-        </div>
-        <div class="footerlist3">
-          <span>Planes Familiares</span>
-          <span>Servicios en Linea</span>
-          <span>Obituarios</span>
-          <span>Buscar Difunto</span>
-        </div>
-        <div class="footersection2">
-          <h1 class="footertittle">Contactenos</h1>
-          <p>Llame o Reúnase con nosotros</p>
-          <div class="footerhorarios">
-            <div class="Contactenossection">
-              <div class="greenline"></div>
-              <div class="sidegreenlinecontent">
-                <p class="ct1">Lunes a Viernes</p>
-                <p>8:00 am - 5:00pm</p>
-                <br>
-                <p class="ct1">Sabados</p>
-                <p>8:00 am - 5:00pm</p>
-              </div>
             </div>
-            <div class="Contactenossection">
-              <div class="greenline"></div>
-              <div class="sidegreenlinecontent">
-                <p class="ct1">Parque Cementerio</p>
-                <p>+1 (809) - 971 - 7222</p>
-                <br>
-                <p class="ct1">Departemento de Servicios</p>
-                <p>+1 (829) - 345 - 1022</p>
-              </div>
-            </div>
-          </div>
+            <a href="#" class="text-gray-700 hover:text-green-500">Servicios</a>
+            <a href="#" class="text-gray-700 hover:text-green-500">FAQ</a>
+            <a href="#" class="text-gray-700 hover:text-green-500">Blog</a>
+            <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">WhatsApp</a>
+        </nav>
+        <div class="md:hidden">
+            <button id="menu-button" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-      </div>
-    </footer>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-md z-50">
+        <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Inicio</a>
+        <div class="relative group">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Nosotros</a>
+            <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a href="../pages/quienes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+                <a href="../pages/planes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+                <a href="../pages/obi.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+            </div>
+        </div>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Servicios</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">FAQ</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
+        <a href="#" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"> Iniciar Sesión</a>
+    </div>
+</header>
 
-    <!-- Vinculación con el archivo de JavaScript -->
-    <script src="../assets/js/script.js"></script>
-</body>
+<div class="sec1">
+  <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
+     <h1>¿Quiénes Somos?</h1>
+     </div>
+  </div>
+    <div class="section">
+        <div class="content">
+            <div class="text">
+                <h2>Misión</h2>
+                <p>Ofrecer a todas las familias de República Dominicana un plan de previsión familiar accesible, confiable y asequible, asegurando paz y respaldo en los momentos más difíciles.</p>
+            </div>
+            <img alt="A group of happy elderly people smiling together" src="../assets/images/DSC_0606.JPG"/>
+        </div>
+    </div>
+    <div class="section">
+        <div class="content">
+            <img alt="A group of serious looking young professionals" src="../assets/images/DJI_0288.JPG"/>
+            <div class="text">
+                <h2>Visión</h2>
+                <p>Ser el referente en servicios funerarios, con instalaciones modernas y sostenibles, un equipo comprometido con la excelencia en la atención y un profundo respeto hacia las familias y el medio ambiente.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="content">
+            <img alt="A modern building with green surroundings" src="../assets/images/DSC_0621.JPG"/>
+            <div class="text">
+                <h2 class="green">Nuestra Historia</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p>
+                <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.</p>
+                <p>Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div class="flex justify-center md:justify-start">
+              <img alt="Company Logo" class="flogo" src="../assets/images/Emblema_ODS_block (PNG).png" />
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+              <ul class="space-y-1 text-center md:text-left">
+                  <li class="hover:text-green-400 transition-colors duration-300">Inicio</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">FAQ</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Blog</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Empleos</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Iniciar Sesión</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Registrarse</li>
+              </ul>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+              <ul class="space-y-1 text-center md:text-left">
+                  <li class="hover:text-green-400 transition-colors duration-300">Sobre Nosotros</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Cuentas Bancarias</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Afiliarse</li>
+              </ul>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+              <ul class="space-y-1 text-center md:text-left">
+                  <li class="hover:text-green-400 transition-colors duration-300">Planes Familiares</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Servicios en Línea</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Obituarios</li>
+                  <li class="hover:text-green-400 transition-colors duration-300">Buscar Difunto</li>
+              </ul>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+              <div class="mb-4 text-center md:text-left">
+                  <p class="text-green-600 text-lg">Lunes a Viernes</p>
+                  <p>8:00 am - 5:00 pm</p>
+                  <p class="text-green-600 text-lg">Sábados</p>
+                  <p>8:00 am - 12:00 m</p>
+              </div>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+              <div class="mb-4 text-center md:text-left">
+                  <p class="text-green-600 text-lg">Parque Cementerio</p>
+                  <p>+1 (809) 971 - 7222</p>
+                  <p class="text-green-600 text-lg">Departamento de Servicios</p>
+                  <p>+1 (829) 345 - 1022</p>
+              </div>
+              <div class="text-center md:text-left">
+                  <p class="text-green-600 text-lg">Dirección</p>
+                  <p>Prolongación Av. Hermanas Mirabal, Sector La Otra Banda, Santiago de los Caballeros, República Dominicana</p>
+              </div>
+          </div>
+      </div>
+      <div class="flex justify-center space-x-8 mt-8">
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fab fa-facebook-f icon-outline"></i>
+          </a>
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fab fa-whatsapp"></i>
+          </a>
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fab fa-twitter icon-outline"></i>
+          </a>
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fab fa-youtube icon-outline"></i>
+          </a>
+          <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" href="#">
+              <i class="fas fa-envelope icon-outline"></i>
+          </a>
+      </div>
+      <p class="text-center mt-8">© Parque Cementerio Jardines del Recuerdo 2024, S.A.S. Todos los derechos reservados.</p>
+  </footer>
+
+  
+
+<script>
+      document.getElementById('menu-button').addEventListener('click', function() {
+          var menu = document.getElementById('mobile-menu');
+          if (menu.classList.contains('hidden')) {
+              menu.classList.remove('hidden');
+          } else {
+              menu.classList.add('hidden');
+          }
+      });
+  </script>
+  </body>
 </html>

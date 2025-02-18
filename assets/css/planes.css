@@ -15,134 +15,6 @@ html{
   font-family: "Playfair Display", serif;
 }
 
-nav{ 
-  font-family: "Lato", serif;
-  height: 80px;
-  background-color: var(--color-1);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-weight: 400;
-  border-bottom: 1px solid rgb(202, 202, 202);
-  z-index: 1;  
-}
-
-.links-container{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center; 
-}
-
-nav a{
-  height: 100%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--text-color);
-  border-radius: 20px;
-  transition: background-color 0.5s cubic-bezier(.07,.04,.09,1.00);
-  margin-left: 5px;
-}
-
-nav .link{
-  height: 45%;
-}
-
-nav .link:hover{
-  background-color: var(--accent-color);
-  color: white;
-}
-
-nav .navimg{
-  height: 80%;
-}
-
-nav .home-link{
-  margin-right: auto; 
-  margin-left: 80px;
-}
-
-nav .login-link{
-  background-color: #43b248;
-  color: white;
-  margin-left: 50px;
-  margin-right: 80px;
-}
-
-nav svg{
-  fill: var(--text-color);
-}
-
-#sidebar-active{
-  display: none;
-}
-
-.open-sidebar-button, .close-sidebar-button{
-  display: none;
-}
-
-@media(max-width: 880px){
-  .links-container{
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 10;
-    width: 300px;
-    background-color: var(--color-1);
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-    transition: 1.1s cubic-bezier(.07,.04,.09,1.00);
-  }
-
-  nav a{
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 20px 30px;
-    justify-content: flex-start;
-  }
-
-  .open-sidebar-button, .close-sidebar-button{
-    padding: 20px;
-    display: block;
-  }
-
-  #sidebar-active:checked ~ .links-container{
-    right: 0;
-  }
-  #sidebar-active:checked ~ #overlay{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9; 
-  }
-
-  nav .login-link{
-    background-color: #43b248;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  nav a{    
-    margin-left: 0px;
-  }
-
-  nav .navimg{
-    height: auto;  
-    width: 100%;
-  }
-
-  nav .home-link{
-    margin-right: auto;      
-    margin-left: 0px;
-  }
-}
 
 
 
@@ -190,98 +62,6 @@ nav svg{
 }
 
 
-footer{
-  font-family: "Lato", serif;
-  background-color: #333333;
-  color: white;
-}
-
-.footerimg{
-  height: 80px;
-}
-
-.footercontent {
-  padding: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;   
-}
-
-.footerlist1{
-  margin-left: 40px;
-  display: flex;
-  flex-direction: column;
-}
-
-.footerlist2{
-  margin-left: 40px;
-  display: flex;
-  flex-direction: column;
-}
-
-.footerlist3{
-  margin-left: 40px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.footerlist1 span{
-  margin: 6px;
-}
-
-.footerlist2 span{
-  margin: 6px;
-}
-
-.footerlist3 span{
-  margin: 6px;
-}
-
-.footertittle{
-  font-size: 22px;
-  font-weight: 300;
-  color: #43b248;
-  
-}
-
-.footersection2 {
-  margin-left: 40px;
-  width: 42%;
-}
-
-.footerhorarios {
-  display: flex;
-  flex-direction: row;
-}
-
-.footersection2 p{
-  font-weight: 300;
-  
-}
-
-.greenline {
-
-  height: 100px;
-  width: 1px;
-  min-width: 1px;
-  max-width: 1px;
-  background-color: #26672a;
-}
-
-.Contactenossection{
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-.ct1{
-  font-size: 12px;
-}
-.sidegreenlinecontent {
-  margin-top: 10px;
-  margin-left: 18px;
-}
 
 
 
@@ -323,5 +103,49 @@ footer{
   border-radius: 20px;
   position: relative;
   bottom: 0px;
+}
+
+
+icon-outline {
+  -webkit-text-stroke: 1px #16a34a; /* Custom green outline */
+  color: transparent;
+}
+.icon-outline:hover {
+  color: #16a34a; /* Fill color on hover */
+}
+
+footer{
+  background-color: #144816;
+  color: white;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+.flogo {
+  width: auto;
+  height: 75px;
+}
+
+footer li {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .text-green-600 {
+  font-size: 18px;
+}
+
+
+.navpadding {
+  margin-left: 30px;
+  height: 100%;
+  width: auto;
+}
+.navpadding2 {
+  margin-right: 30px;
 }
 
