@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+ }
+
+html {
+    scroll-snap-type: y mandatory;
+}
+section {
+    scroll-snap-align: start;
+
+}
+
+ body {
+    font-family: "Lato", serif;
+    overflow-x: hidden;
+ }
+
+ .imgsec1{
+    width: 100%; 
+    height: 90vh;
+    object-fit: cover;
+    object-position: left center;  
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+    z-index: -1;
+   }
+   
+  .sec1 {
+    position: relative;
+     width: 100%;
+     height: 90vh;
+     margin-bottom: 0px;
+  }
+  
+  .sec1 h1{
+     
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 45px;
+    top: 45%;
+     left: 0;
+      position:absolute;
+      text-align:center;
+      width: 100%
+  }
+
+  
+  
+
+footer{
+    background-color: #144816;
+    color: white;
+    padding-top: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 20px;
+    height: 100vh;
+  }
+  .flogo {
+    width: auto;
+    height: 75px;
+  }
+  
+  footer li {
+    font-size: 14px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  footer .text-green-600 {
+    font-size: 18px;
+  }
+  
+  
+  .navpadding {
+    margin-left: 30px;
+    height: 100%;
+    width: auto;
+  }
+  .navpadding2 {
+    margin-right: 30px;
+  }
+
+
+
+
+  /* Inspired by this pen by Pieter Biesemans https://codepen.io/pieter-biesemans/pen/BQBWXX and My Mother Before Me project http://mymotherbeforeme.com/ */
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* hide scrollbar */
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+  }
+  .external {
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .horizontal-scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vh;
+    transform: rotate(-90deg) translate3d(0,-100vh,0);
+    transform-origin: right top;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    height: 100vw;
+    perspective: 1px;
+      transform-style: preserve-3d;
+    padding-bottom: 10rem;
+  }
+  .img-wrapper {
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45vh;
+    transform-origin: 50% 50%;
+    transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
+    transition: 1s;
+  }
+  
+  .img-wrapper:hover {
+   
+  }
+  
+  .slower {
+    transform: rotate(90deg) translateZ(-.1px) scale(1.1) translateX(0%) translateY(-10vh);
+  }
+  .slower1 {
+    transform: rotate(90deg) translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
+  }
+  .slower2 {
+    transform: rotate(90deg) translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
+  }
+  .slower-down {
+    transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(8vh) ;
+  }
+  .faster {
+    transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh) ;
+  }
+  .faster1 {
+    transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh) ;
+  }
+  .fastest {
+    transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh) ;
+  }
+  .vertical {
+     transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%) ;
+  }
+  .last {
+    transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh) ;
+  }
+  .scroll-info, header {
+    position: absolute;
+    left: 1rem;
+  }
+  
+  
+
+  .scroll-info {
+    top: 1rem;
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+  .img-wrapper a {
+    overflow: hidden;
+    display: block;
+    padding: 1vh ;
+    background: #ffffff;
+    box-shadow: 0 10px 50px #6e6e6e82;
+  }
+  .external img {
+    max-width: 52vh;
+    max-height: 55vh;
+    transition: .5s;
+    vertical-align: top;
+    
+  }
+  a img {
+    filter: none;
+  }
+  p {
+    margin: 0;
+  }
+  .scroll-info {
+    display: flex;
+    align-items: center;
+  }
+  .icon svg {
+      width: 50px;
+      fill: currentcolor;
+  }

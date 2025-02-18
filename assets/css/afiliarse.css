@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+ }
+
+
+ body {
+    font-family: "Lato", serif;
+ }
+
+.olafil {
+    padding: 40px;
+}
+
+
+
+ .imgsec1{
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover;
+    object-position: left center;  
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  
+  .sec1 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .sec1 h1{
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 45px;
+    top: 45%;
+    left: 0;
+    position:absolute;
+    text-align:center;
+    width: 100%
+  }
+
+ .containera {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.form-container {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.form-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.benefits-container h2, .testimonials-container h2 {
+    font-weight: 300;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.form-container input, .form-container select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    outline: none;
+    background-color: #f5f5f5;
+}
+.form-container input:focus, .form-container select:focus {
+    border-bottom: 2px solid #4CAF50;
+}
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+.form-container button:hover {
+    background-color: #45a049;
+}
+.benefits-container {
+    background-color: #e0e0e0;
+    padding: 40px 20px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.benefits-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.benefits-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.benefits-container img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.benefits-container ol {
+    list-style: none;
+    margin-left: 20px;
+    text-align: left;
+    counter-reset: benefits-counter;
+
+}
+.benefits-container ol li {
+    margin: 20px 0;
+    font-size: 1em;
+    counter-increment: benefits-counter;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.benefits-container ol li::before {
+    content: counter(benefits-counter);
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonials-container {
+
+    background-color: #2e7d32;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+.testimonials-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+}
+.testimonials-container .testimonial {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+}
+.testimonials-container .testimonial iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+}
+.testimonials-container .testimonial p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+@media (max-width: 768px) {
+    .form-container form {
+        width: 100%;
+    }
+    .form-container input, .form-container select {
+        width: 90%;
+    }
+    .benefits-content {
+        flex-direction: column;
+    }
+    .benefits-container ol {
+        margin-left: 0;
+        text-align: center;
+    }
+    .testimonials-container .testimonial {
+        width: 100%;
+    }
+}
+
+
+
+footer{
+    background-color: #144816;
+    color: white;
+    padding-top: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 20px;
+  }
+  .flogo {
+    width: auto;
+    height: 75px;
+  }
+  
+  footer li {
+    font-size: 14px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  footer .text-green-600 {
+    font-size: 18px;
+  }
+  
+  
+  .navpadding {
+    margin-left: 30px;
+    height: 100%;
+    width: auto;
+  }
+  .navpadding2 {
+    margin-right: 30px;
+  }
