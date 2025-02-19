@@ -67,7 +67,13 @@ header{
   font-family: "Lato", serif;
   color: white;
   font-weight: 400;
+  
 }
+
+.mainp{
+  width: 50%;
+} 
+
 .sec1 button{
   font-family: "Playfair Display", serif;
   background-color: #43b248;
@@ -387,6 +393,9 @@ text-align: left;
       align-items: center;
   }
 
+  .mainp{
+    width: 100%;
+  } 
   .contact-form{
     padding: 10px 20px;
     

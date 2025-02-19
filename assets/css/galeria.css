@@ -99,10 +99,10 @@ footer{
   
   /* hide scrollbar */
   ::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-  }
-  
+    width: 0px;  /* Mantiene la barra vertical visible */
+    height: 0px; /* Oculta la barra horizontal */
+}
+
   ::-webkit-scrollbar-button {
     width: 1px;
     height: 1px;
@@ -132,7 +132,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 45vh;
+    min-height: 55vh;
     transform-origin: 50% 50%;
     transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
     transition: 1s;
@@ -213,3 +213,14 @@ footer{
       width: 50px;
       fill: currentcolor;
   }
+
+  .navpadding {
+    margin-left: 30px;
+    height: 100%;
+    width: auto;
+  }
+  .navpadding2 {
+    margin-right: 30px;
+  }
+  
+  
