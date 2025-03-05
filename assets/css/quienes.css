@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+html{
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+
+
+
+.imgsec1{
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover;
+    object-position: left center;  
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  
+  .sec1 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .sec1 h1{
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 45px;
+    top: 45%;
+    left: 0;
+    position:absolute;
+    text-align:center;
+    width: 100%
+  }
+  
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+.section:nth-child(odd) {
+    background-color: #ffffff;
+}
+.section:nth-child(even) {
+    background-color: #e0e0e0;
+}
+.content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+.content img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.text {
+    max-width: 500px;
+    margin: 20px;
+}
+.text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333333;
+}
+.text p {
+    font-size: 16px;
+    color: #666666;
+}
+.text h2.green {
+    color: #4CAF50;
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text {
+        text-align: center;
+    }
+}
+
+icon-outline {
+  -webkit-text-stroke: 1px #16a34a; /* Custom green outline */
+  color: transparent;
+}
+.icon-outline:hover {
+  color: #16a34a; /* Fill color on hover */
+}
+
+footer{
+  background-color: #144816;
+  color: white;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+.flogo {
+  width: auto;
+  height: 75px;
+}
+
+footer li {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .text-green-600 {
+  font-size: 18px;
+}
+
+
+.navpadding {
+  margin-left: 30px;
+  height: 100%;
+  width: auto;
+}
+.navpadding2 {
+  margin-right: 30px;
+}
+

@@ -5,6 +5,17 @@
   --accent-color: #43b248;
  }
 
+
+   
+ .navpadding {
+  margin-left: 30px;
+  height: 100%;
+  width: auto;
+}
+.navpadding2 {
+  margin-right: 30px;
+}
+
 html {
     scroll-snap-type: y mandatory;
 }
