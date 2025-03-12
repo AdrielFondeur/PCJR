@@ -3,62 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Construcción</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-        }
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-        .email {
-            margin-top: 20px;
-            font-size: 1em;
-        }
-        .loader {
-            margin-top: 20px;
-            width: 50px;
-            height: 50px;
-            border: 5px solid #ccc;
-            border-top: 5px solid #34db39;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <title>PCJR | FAQ</title>
+    <!-- Vinculación con Archivo CSS -->
+    <link rel="stylesheet" href="../assets/css/faq.css">
+    <!-- Vinculación con librexría de JS para el SCROLL -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 </head>
 <body>
-    <div class="container">
-        <h1>¡Sitio en Construcción!</h1>
-        <p>Estamos trabajando duro para ofrecerte la mejor experiencia.</p>
-        <p>¡Vuelve pronto!</p>
-        <div class="loader"></div>
-        
+
+    <header class="bg-white shadow-md relative z-50">
+        <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
+          <img src="../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" />
+      
+          <!-- Menú de escritorio -->
+          <nav class="hidden md:flex items-center space-x-6 navpadding2">
+            <a href="../index.html" class="text-gray-700 hover:text-green-500">Inicio</a>
+            <div class="relative group">
+              <a href="#" class="text-gray-700 hover:text-green-500">Nosotros</a>
+              <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a href="../pages/quienes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+                <a href="../pages/Galeria.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+                <a href="../pages/empleos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+                <a href="../pages/pagos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
+              </div>
+            </div>
+            <div class="relative group">
+              <a href="#" class="text-gray-700 hover:text-green-500">Servicios</a>
+              <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a href="../pages/Afiliarse.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+                <a href="../pages/planes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+                <a href="../pages/obi.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+                <a href="../pages/buscardif.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+              </div>
+            </div>
+            <a href="../pages/faq.html" class="text-gray-700 hover:text-green-500">FAQ</a>
+            <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="text-gray-700 hover:text-green-500">Blog</a>
+            <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+          </nav>
+      
+          <!-- Botón menú móvil -->
+          <div class="md:hidden">
+            <button id="menu-button" class="text-gray-700 focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md">
+          <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Inicio</a>
+          
+          <!-- Dropdown de "Nosotros" -->
+          <div class="border-t border-gray-200"></div>
+          <div class="relative">
+            <button id="mobile-nosotros" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+              Nosotros
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div id="mobile-nosotros-menu" class="hidden">
+              <a href="../pages/quienes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+              <a href="../pages/Galeria.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+              <a href="../pages/empleos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+              <a href="../pages/pagos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
+            </div>
+          </div>
+          
+          <!-- Dropdown de "Servicios" -->
+          <div class="border-t border-gray-200"></div>
+          <div class="relative">
+            <button id="mobile-servicios" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+              Servicios
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div id="mobile-servicios-menu" class="hidden">
+              <a href="../pages/Afiliarse.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+              <a href="../pages/planes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+              <a href="../pages/obi.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+              <a href="../pages/buscardif.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+            </div>
+          </div>
+          
+          <div class="border-t border-gray-200"></div>
+          <a href="../pages/faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">FAQ</a>
+          
+          <div class="border-t border-gray-200"></div>
+          <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
+          
+          <div class="border-t border-gray-200"></div>
+          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+        </div>
+      </header>
+      
+
+
+
+
+    <div class="sec1">
+        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
+           <h1>FAQ</h1>
+           </div>
+
+    <div class="faq-section">
+        <h2 class="tituloh2">Preguntas más Frecuentes</h2>
+        <div class="faq">
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Como puede actualizar mis datos?
+            </div>
+            <div class="faq-answer">
+                Puede actualizar sus datos accediendo a su cuenta y seleccionando la opción "Actualizar datos".
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Como puedo consultar mi balance?
+            </div>
+            <div class="faq-answer">
+                Puede consultar su balance en la sección "Mi cuenta" después de iniciar sesión.
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Puedo realizar pagos en línea?
+            </div>
+            <div class="faq-answer">
+                Sí, puede realizar pagos en línea a través de nuestra plataforma segura.
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Que otros métodos de pago disponen?
+            </div>
+            <div class="faq-answer">
+                Aceptamos tarjetas de crédito, débito y transferencias bancarias.
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Cuanto cuesta el servicio?
+            </div>
+            <div class="faq-answer">
+                El costo del servicio varía según el plan seleccionado. Consulte nuestra página de precios para más detalles.
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                Como encuentro a mi conocido?
+            </div>
+            <div class="faq-answer">
+                Puede buscar a su conocido utilizando la función de búsqueda en nuestra página principal.
+            </div>
+        </div>
     </div>
+
+
+    <footer class="">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-4">
+            <div class="flex justify-center md:justify-start">
+                <img alt="Company Logo" class="flogo" src="assets/images/Emblema_ODS_block (PNG).png" />
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <ul class="space-y-1 text-center md:text-left">
+                    <li class="hover:text-green-400 transition-colors duration-300">Inicio</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">FAQ</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Blog</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Empleos</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Iniciar Sesión</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Registrarse</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <ul class="space-y-1 text-center md:text-left">
+                    <li class="hover:text-green-400 transition-colors duration-300">Sobre Nosotros</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Cuentas Bancarias</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Afiliarse</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <ul class="space-y-1 text-center md:text-left">
+                    <li class="hover:text-green-400 transition-colors duration-300">Planes Familiares</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Servicios en Línea</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Obituarios</li>
+                    <li class="hover:text-green-400 transition-colors duration-300">Buscar Difunto</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <div class="mb-4 text-center md:text-left">
+                    <p class="text-green-600 text-lg">Lunes a Viernes</p>
+                    <p>8:00 am - 5:00 pm</p>
+                    <p class="text-green-600 text-lg">Sábados</p>
+                    <p>8:00 am - 12:00 m</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <div class="mb-4 text-center md:text-left">
+                    <p class="text-green-600 text-lg">Parque Cementerio</p>
+                    <p>+1 (809) 971 - 7222</p>
+                    <p class="text-green-600 text-lg">Departamento de Servicios</p>
+                    <p>+1 (829) 345 - 1022</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="text-green-600 text-lg">Dirección</p>
+                    <p>Prolongación Av. Hermanas Mirabal, Sector La Otra Banda, Santiago de los Caballeros, República Dominicana</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-8 mt-8">
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://www.facebook.com/jardinesdelrecuerdosantiago">
+                <i class="fab fa-facebook-f icon-outline"></i>
+            </a>
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://www.instagram.com/jardinesdelrecuerdosantiago/?hl=es-la">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://api.whatsapp.com/send?phone=18294210760&text=Quiero%20ser%20previsivo.">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://x.com/jardinesdelrec1?lang=es">
+                <i class="fab fa-twitter icon-outline"></i>
+            </a>
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://www.youtube.com/channel/UCFrUIXEKI4mnIFlospXzhxQ">
+                <i class="fab fa-youtube icon-outline"></i>
+            </a>
+            <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="mailto:info@jardinesrecuerdo.com">
+                <i class="fas fa-envelope icon-outline"></i>
+            </a>
+        </div>
+        <p class="text-center mt-8">© Parque Cementerio Jardines del Recuerdo 2024, S.A.S. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script>
+  document.getElementById('menu-button').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+  
+  // Toggle del submenú "Nosotros" en mobile
+  document.getElementById('mobile-nosotros').addEventListener('click', function() {
+    document.getElementById('mobile-nosotros-menu').classList.toggle('hidden');
+  });
+  
+  // Toggle del submenú "Servicios" en mobile
+  document.getElementById('mobile-servicios').addEventListener('click', function() {
+    document.getElementById('mobile-servicios-menu').classList.toggle('hidden');
+  });
+         document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tabs div');
+            const sections = document.querySelectorAll('.form-content');
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    sections.forEach(section => section.classList.add('hidden'));
+                    sections[index].classList.remove('hidden');
+                });
+            });
+        });
+
+
+        function toggleAnswer(event) {
+            const answer = event.currentTarget.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -33,7 +33,8 @@ header{
 
 .imgsec1{
   width: 100%; 
-  height: 100vh; 
+  height: 100vh;
+  min-height: 700px; 
   object-fit: cover;
   object-position: left top; 
   position: absolute; 
@@ -47,6 +48,7 @@ header{
   position: relative;
    width: 100%;
    height: calc(100vh - 80px);
+   min-height: 700px;
    display: flex;
    align-items: center; 
   
@@ -407,8 +409,8 @@ text-align: left;
   color: white;
 }
 .testimonials .testimonial {
-  max-width: 300px;
-  margin: 0 auto;
+ min-width: 320px;
+margin-right: 80px;
 }
 .testimonials .testimonial p {
   font-size: 14px;
@@ -426,9 +428,8 @@ text-align: left;
 }
 .testimonials .carousel {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  overflow-x: auto;
+  gap: 100px;
+
   padding: 20px 0;
 }
 .testimonials .carousel::-webkit-scrollbar {
@@ -461,11 +462,34 @@ text-align: left;
     display: flex;
     flex-direction: column;
   }
-  .testimonials .carousel {
-      flex-direction: column;
-      align-items: center;
+  .carousel-inner {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 60s linear infinite;
+  }
+  
+}
+
+
+.testimonials {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: calc(200%);
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
+
 
 .what-we-offer button{
   margin-top: 40px;
@@ -541,4 +565,37 @@ footer .text-green-600 {
 }
 .navpadding2 {
   margin-right: 30px;
+}
+
+
+/* Posiciona solo el contenedor del slider y establece min-height */
+.unslider.imgsec1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  z-index: -1;
+}
+
+/* Estilos para la lista e imágenes */
+.unslider ul,
+.unslider li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.unslider img {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  object-fit: cover;
+  object-position: left top;
+
+}
+
+.unslider-arrow {
+  display: none !important;
 }
