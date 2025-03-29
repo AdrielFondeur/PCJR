@@ -141,7 +141,7 @@
     content: counter(benefits-counter);
     font-weight: bold;
     margin-right: 10px;
-    background-color: #ccc;
+    background-color: #43b248;
     color: white;
     border-radius: 50%;
     width: 24px;
@@ -231,3 +231,16 @@ footer{
   .navpadding2 {
     margin-right: 30px;
   }
+
+  
+.hiddenscroll{
+    opacity: 0;
+    transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+    transform: translateY(+30px);
+  }
+  
+  .showscroll {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  

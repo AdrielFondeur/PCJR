@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 :root{
   --color-1: white;
   --text-color: #333333;
@@ -272,6 +273,20 @@ header{
   background-color: white;
   padding: 0px;
   padding-bottom: 20px;
+  transition: 0.2s ease cubic-bezier(.03,1.1,.58,.99);
+}
+
+.what-we-offer .offers .offer:hover{
+    transform: scale(1.1);
+}
+
+.what-we-offer .offers .offer:hover img{
+  filter: brightness(1.1);
+  transition: .5s ease;
+}
+
+.what-we-offer .offers .offer img{
+  transition: .5s ease;
 }
 
 .what-we-offer h3{
@@ -504,6 +519,7 @@ margin-right: 80px;
   font-size: 16px;
   cursor: pointer;
   font-weight: 600;
+  transition: 0.2s ease;
 }
 
 .what-we-offer button:hover {
@@ -512,6 +528,7 @@ margin-right: 80px;
  --myColor1: #43b248;
  --myColor2: #d4b757;
  --myColor3: #ffdb98;
+
 }
 
 .what-we-offer button:not(:hover){
@@ -598,4 +615,34 @@ footer .text-green-600 {
 
 .unslider-arrow {
   display: none !important;
+}
+
+
+.monumento {
+  top: -80px;
+  width: 100%;
+  
+  height: auto;
+  margin-left: 0px;
+}
+
+
+.what-we-offer {
+  background-image: url("../images/RECORTADO.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 60px 20px; /* Puedes ajustar esto si hace falta espacio interno */
+}
+
+.hiddenscroll{
+  opacity: 0;
+  transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+  transform: translateY(+30px);
+}
+
+.showscroll {
+  opacity: 1;
+  transform: translateY(0px);
 }

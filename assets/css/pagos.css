@@ -53,7 +53,8 @@ body {
     left: 0;
     position:absolute;
     text-align:center;
-    width: 100%
+    width: 100%;
+ 
   }
 
   footer{
@@ -146,8 +147,8 @@ body {
     font-size: 16px;
 }
 .tabs .active {
-    border-bottom: 2px solid #2d6a4f;
-    color: #2d6a4f;
+    border-bottom: 2px solid #43b248;
+    color: #43b248;
 }
 .form-section p {
     font-size: 16px;
@@ -169,7 +170,7 @@ body {
     margin: 0 auto;
 }
 .form-section button {
-    background-color: #2d6a4f;
+    background-color: #43b248;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -276,4 +277,17 @@ body {
     initial-value: #43b248;
     inherits: false;
   }
+
+  
+.hiddenscroll{
+  opacity: 0;
+  transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+  transform: translateY(+30px);
+}
+
+.showscroll {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
   

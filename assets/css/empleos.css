@@ -139,3 +139,15 @@ footer{
   .navpadding2 {
     margin-right: 30px;
   }
+
+
+  .hiddenscroll{
+    opacity: 0;
+    transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+    transform: translateY(+30px);
+  }
+  
+  .showscroll {
+    opacity: 1;
+    transform: translateY(0px);
+  }

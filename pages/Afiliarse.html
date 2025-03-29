@@ -6,10 +6,10 @@
     <title>PCJR - EMPLEOS</title>
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/afiliarse.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 </head>
@@ -99,13 +99,13 @@
 
     <div class="sec1">
         <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
-           <h1>Plan de Afiliación</h1>
+           <h1 class="hiddenscroll">Plan de Afiliación</h1>
            </div>
         </div>
     
     <div class="containera form-container">
-        <h1>Afiliarse</h1>
-        <form>
+        <h1 class="hiddenscroll">Afiliarse</h1>
+        <form class="hiddenscroll">
             <input name="nombre" placeholder="Nombre" style="width: 80%; background-color: #f5f5f5;" type="text"/>
             <input name="apellido" placeholder="Apellido" style="width: 80%; background-color: #f5f5f5;" type="text"/>
             <input name="correo" placeholder="Correo" style="width: 80%; background-color: #f5f5f5;" type="email"/>
@@ -116,8 +116,8 @@
         </form>
     </div>
     <div class="containera benefits-container">
-        <h2>Beneficios de ser Afiliado</h2>
-        <div class="benefits-content">
+        <h2 class="hiddenscroll">Beneficios de ser Afiliado</h2>
+        <div class="benefits-content hiddenscroll">
             <img alt="Personas mayores usando una tablet" height="250" src="../assets/images/busi.webp" width="250"/>
             <ol class="olafil">
                 <li>Descuentos especiales de hasta del 30%</li>
@@ -128,13 +128,13 @@
         </div>
     </div>
     <div class="containera testimonials-container">
-        <h2>Opiniones de nuestros Afiliados</h2>
-        <div class="testimonial">
+        <h2 class="hiddenscroll">Opiniones de nuestros Afiliados</h2>
+        <div class="testimonial hiddenscroll">
             <iframe src="https://www.youtube.com/embed/YICvTJUI0es" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
             <p>Deyanira Romero</p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial hiddenscroll">
             <iframe src="https://www.youtube.com/embed/LbqAlF-PAEw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>José Luis Fernández</p>
         </div>
@@ -148,7 +148,7 @@
     <footer class="">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-4">
             <div class="flex justify-center md:justify-start">
-                <img alt="Company Logo" class="flogo" src="assets/images/Emblema_ODS_block (PNG).png" />
+                <img alt="Company Logo" class="flogo" src="../assets/images/Emblema_ODS_block (PNG).png" />
             </div>
             <div class="flex flex-col items-center md:items-start">
                 <ul class="space-y-1 text-center md:text-left">
@@ -207,7 +207,8 @@
                 <i class="fab fa-whatsapp"></i>
             </a>
             <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://x.com/jardinesdelrec1?lang=es">
-                <i class="fab fa-twitter icon-outline"></i>
+              <i class="fab fa-x-twitter icon-outline"></i>
+
             </a>
             <a class="text-green-600 hover:text-green-500 transition-colors duration-300 text-2xl" target="_blank" href="https://www.youtube.com/channel/UCFrUIXEKI4mnIFlospXzhxQ">
                 <i class="fab fa-youtube icon-outline"></i>
@@ -242,5 +243,6 @@
          }
      });
  </script>
+   <script src="../assets/js/showonscroll.js"></script>
 </body>
 </html>
