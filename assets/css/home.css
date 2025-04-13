@@ -31,20 +31,53 @@ header{
   z-index: 1;
 }
 
-
-.imgsec1{
-  width: 100%; 
-  height: 100vh;
-  min-height: 700px; 
-  object-fit: cover;
-  object-position: left top; 
-  position: absolute; 
+.imgsec1 {
+  position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(50%);
+  width: 100%;
+  height: 100vh;
   z-index: -1;
+  overflow: hidden;
+}
+
+.youtube-background {
+  background: #000; /* Fallback background color if the video fails to load */
+  position: fixed; /* Fixes the video to the viewport */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Places the video behind other content */
+  overflow: hidden; /* Hides any potential overflow from the iframe */
+}
+
+.youtube-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* Sets the width to 100% of the viewport width */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+  transform: translate(-50%, -50%); /* Centers the video both horizontally and vertically */
+  pointer-events: none; /* Prevents the iframe from intercepting mouse events */
+  filter: brightness(40%); /* Apply the brightness filter */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .youtube-background iframe {
+     /* If the video aspect ratio is wider than 16:9 (typical YouTube),
+        adjust the height to cover the viewport */
+     height: 56.25vw; /* height = 100 * (9 / 16) = 56.25 */
+   }
  }
  
+ @media (max-aspect-ratio: 16/9) {
+  .youtube-background iframe {
+     /* If the video aspect ratio is narrower than 16:9,
+        adjust the width to cover the viewport */
+     width: 177.78vh; /* width = 100 / (9 / 16) = 177.777777 */
+   }
+ }
 .sec1 {
   position: relative;
    width: 100%;
@@ -55,14 +88,21 @@ header{
   
 }
 
-.sec1 .content{
+.sec1 .content {
   width: 80%;
-   margin: 0 auto;
+  margin: 0 auto;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 .sec1 h1{
   color: white;
   font-weight: 400;
   font-size: 45px;
+  font-family: "Playfair Display", serif;
 }
 
 .sec1 p{
@@ -81,9 +121,9 @@ header{
   font-family: "Playfair Display", serif;
   background-color: #43b248;
   color: white;
-
+  width: 200px;
   border: unset;
-  border-radius: 20px;
+  border-radius: 2px;
   margin-top: 20px;
   font-weight: 600;
   display: inline-flex; /* Asegura que los elementos internos estén en una línea */
@@ -98,7 +138,7 @@ header{
 .specialbtn2 {
   background-color: #43b248;
   color: white;
-
+  
   border: unset;
   border-radius: 2px;
   font-weight: 600;
@@ -233,8 +273,8 @@ header{
   font-weight: 300;
   margin-top: 30px;
   margin-bottom: 60px;
-  font-family: "Lato", serif;
 
+  font-family: "Playfair Display", serif;
 }
 .section p {
   font-size: 16px;
@@ -273,11 +313,12 @@ header{
   background-color: white;
   padding: 0px;
   padding-bottom: 20px;
-  transition: 0.2s ease cubic-bezier(.03,1.1,.58,.99);
+  transition: .4s ease;
 }
 
 .what-we-offer .offers .offer:hover{
     transform: scale(1.1);
+    
 }
 
 .what-we-offer .offers .offer:hover img{
@@ -482,6 +523,9 @@ margin-right: 80px;
     width: calc(200%);
     animation: scroll 60s linear infinite;
   }
+  .specialbtn2 {
+    width: 100%;
+  }
   
 }
 
@@ -512,7 +556,7 @@ margin-right: 80px;
   font-family: "Lato", serif;
   background-color: #43b248;
   color: white;
-
+  
   border: unset;
   border-radius: 20px;
   padding: 10px 34px;
@@ -585,7 +629,7 @@ footer .text-green-600 {
 }
 
 
-/* Posiciona solo el contenedor del slider y establece min-height */
+/* Posiciona solo el contenedor del slider y establece min-height 
 .unslider.imgsec1 {
   position: absolute;
   top: 0;
@@ -596,7 +640,7 @@ footer .text-green-600 {
   z-index: -1;
 }
 
-/* Estilos para la lista e imágenes */
+/* Estilos para la lista e imágenes 
 .unslider ul,
 .unslider li {
   list-style: none;
@@ -616,7 +660,7 @@ footer .text-green-600 {
 .unslider-arrow {
   display: none !important;
 }
-
+*/
 
 .monumento {
   top: -80px;
@@ -628,9 +672,9 @@ footer .text-green-600 {
 
 
 .what-we-offer {
-  background-image: url("../images/RECORTADO.png");
+  background-image: url("../images/map.png");
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   width: 100%;
   padding: 60px 20px; /* Puedes ajustar esto si hace falta espacio interno */
@@ -638,11 +682,44 @@ footer .text-green-600 {
 
 .hiddenscroll{
   opacity: 0;
-  transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+  transition: all 1.1s cubic-bezier(.07,.04,.09,1.00);
   transform: translateY(+30px);
 }
 
 .showscroll {
   opacity: 1;
   transform: translateY(0px);
+}
+
+@media screen and (max-width: 768px) {
+  .what-we-offer {
+    background-image: none !important;
+  }
+}
+
+.h3m {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.btnmasinfo {
+  margin-top: 5px;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px !important;
+}
+
+.btnmasinfo a {
+  color: #43b248 !important; /* ✅ El enlace ahora es verde */
+  text-decoration: underline; /* ✅ Opcional, si quieres que se vea como un link */
+  font-weight: 600; /* ✅ Opcional, un poquito más grueso */
+}
+
+.btnmasinfo a:hover {
+  color: #2e7c32; /* ✅ Un verde más oscuro al pasar el mouse */
+  text-decoration: none; /* ✅ Opcional, quita el subrayado en hover si quieres */
 }

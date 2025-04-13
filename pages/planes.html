@@ -3,129 +3,180 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../assets/css/planes.css">
+   
    <title>Planes</title>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+      <link rel="stylesheet" href="../assets/css/planes.css">
 </head>
 <body>
-   
-    <header class="bg-white shadow-md relative z-50">
-        <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
-          <img src="../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" />
-      
-          <!-- Menú de escritorio -->
-          <nav class="hidden md:flex items-center space-x-6 navpadding2">
-            <a href="../index.html" class="text-gray-700 hover:text-green-500">Inicio</a>
-            <div class="relative group">
-              <a href="#" class="text-gray-700 hover:text-green-500">Nosotros</a>
-              <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <a href="../pages/quienes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
-                <a href="../pages/Galeria.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
-                <a href="../pages/empleos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
-                <a href="../pages/pagos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
-              </div>
-            </div>
-            <div class="relative group">
-              <a href="#" class="text-gray-700 hover:text-green-500">Servicios</a>
-              <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <a href="../pages/Afiliarse.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
-                <a href="../pages/planes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
-                <a href="../pages/obi.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
-                <a href="../pages/buscardif.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
-              </div>
-            </div>
-            <a href="../pages/faq.html" class="text-gray-700 hover:text-green-500">FAQ</a>
-            <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="text-gray-700 hover:text-green-500">Blog</a>
-            <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
-          </nav>
-      
-          <!-- Botón menú móvil -->
-          <div class="md:hidden">
-            <button id="menu-button" class="text-gray-700 focus:outline-none">
-              <i class="fas fa-bars"></i>
-            </button>
+
+  <header class="bg-white shadow-md relative z-50">
+    <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
+      <img src="../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-16 navpadding" />
+  
+      <!-- Menú de escritorio -->
+      <nav class="hidden md:flex items-center space-x-6 navpadding2">
+        <a href="../index.html" class="text-gray-700 hover:text-green-500">Inicio</a>
+        <div class="relative group">
+          <a href="#" class="text-gray-700 hover:text-green-500">Nosotros</a>
+          <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a href="../pages/quienes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+            <a href="../pages/Galeria.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+            <a href="../pages/empleos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+
           </div>
         </div>
-      
-        <!-- Menú móvil -->
-        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md">
-          <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Inicio</a>
-          
-          <!-- Dropdown de "Nosotros" -->
-          <div class="border-t border-gray-200"></div>
-          <div class="relative">
-            <button id="mobile-nosotros" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
-              Nosotros
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="mobile-nosotros-menu" class="hidden">
-              <a href="../pages/quienes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
-              <a href="../pages/Galeria.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
-              <a href="../pages/empleos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
-              <a href="../pages/pagos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
-            </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-700 hover:text-green-500">¿Qué te ofrecemos?</a>
+          <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a href="../pages/Afiliarse.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+            <a href="../pages/planes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Productos</a>
+            <a href="../pages/obi.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+            <a href="../pages/buscardif.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+            <a href="../pages/pagos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Servicios en Línea</a>
           </div>
-          
-          <!-- Dropdown de "Servicios" -->
-          <div class="border-t border-gray-200"></div>
-          <div class="relative">
-            <button id="mobile-servicios" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
-              Servicios
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="mobile-servicios-menu" class="hidden">
-              <a href="../pages/Afiliarse.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
-              <a href="../pages/planes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
-              <a href="../pages/obi.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
-              <a href="../pages/buscardif.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
-            </div>
-          </div>
-          
-          <div class="border-t border-gray-200"></div>
-          <a href="../pages/faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">FAQ</a>
-          
-          <div class="border-t border-gray-200"></div>
-          <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
-          
-          <div class="border-t border-gray-200"></div>
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
         </div>
-      </header>
+        <a href="../pages/faq.html" class="text-gray-700 hover:text-green-500">FAQ</a>
+        <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="text-gray-700 hover:text-green-500">Blog</a>
+        <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+      </nav>
+  
+      <!-- Botón menú móvil -->
+      <div class="md:hidden">
+        <button id="menu-button" class="text-gray-700 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md">
+      <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Inicio</a>
+      
+      <!-- Dropdown de "Nosotros" -->
+      <div class="border-t border-gray-200"></div>
+      <div class="relative">
+        <button id="mobile-nosotros" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+          Nosotros
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-nosotros-menu" class="hidden">
+          <a href="../pages/quienes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+          <a href="../pages/Galeria.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+          <a href="../pages/empleos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+          <a href="../pages/pagos.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
+        </div>
+      </div>
+      
+      <!-- Dropdown de "Servicios" -->
+      <div class="border-t border-gray-200"></div>
+      <div class="relative">
+        <button id="mobile-servicios" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+          ¿Qué te ofrecemos?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-servicios-menu" class="hidden">
+          <a href="../pages/Afiliarse.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+          <a href="../pages/planes.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Productos</a>
+          <a href="../pages/obi.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+          <a href="../pages/buscardif.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+          <a href="../pages/pagos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Servicios en Línea</a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="../pages/faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">FAQ</a>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+    </div>
+  </header>
 
       <div class="sec1">
-      <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
-         <h1>Planes</h1>
+      <img class="imgsec1" src="../assets/images/lotefam_brillo4.jpg"/>
+         <h1>Productos</h1>
          </div>
       </div>
-      <div class="sec2">
-         <h1>Plan de Prevision Familiar</h1>
-         <div class="plan-container">
-            <img src="../assets/images/PHOTO-2022-11-03-15-53-17.jpg" class="plan-img">
-            <div>
-            <p>
-                Anticípate a los momentos difíciles con nuestro Plan de Previsión Familiar, diseñado para brindarte tranquilidad y seguridad. Con facilidades de pago y sin costos iniciales, garantizamos que tus seres queridos estarán protegidos cuando más lo necesiten.
-            </p>
-            <button class="plan-btn">Más información</button>
-            </div>
-         </div>
-      </div>
+      
+<div class="sec2">
+  <h1>Modernas Capillas</h1>
+  <div class="plan-container">
+    <img src="../assets/images/PHOTO-2022-11-03-15-53-17.jpg" class="plan-img">
+    <div class="plan-text">
+      <p>
+        La Capilla es un espacio sagrado y elegante, destinado a rendir homenaje a la vida y a proporcionar consuelo a las familias en momentos de despedida. Con un diseño moderno y acogedor, la capilla está equipada con todas las comodidades necesarias para ofrecer un ambiente de respeto y solemnidad. Sus grandes ventanales permiten la entrada de luz natural, creando una atmósfera de paz que invita a la meditación y al recuerdo. Aquí, las familias pueden reunirse para celebrar la vida de sus seres queridos en un entorno que refleja amor y dignidad.
+      </p>
+      <a href="../pages/capilla.html">
+      <button  class="plan-btn">Planes de Capilla</button></a>
+    </div>
+  </div>
+</div>
 
-      <div class="sec2">
-         <h1>Plan de Prevision Familiar 2</h1>
-         <div class="plan-container">
-            <img src="../assets/images/lotefam_brillo1.jpg" class="plan-img">
-            <div>
-            <p>
-                Tu tranquilidad y la de tu familia es nuestra prioridad. Con el Plan de Previsión Familiar, puedes asegurar desde ya un espacio en nuestros hermosos jardines y mausoleos sin preocupaciones económicas.
-            </p>
-            <button class="plan-btn">Más información</button>
-            </div>
-         </div>
-      </div>
+<div class="sec2">
+  <h1>Hermosos Jardines Familiares</h1>
+  <div class="plan-container">
+    <img src="../assets/images/lotefam_brillo4.jpg" class="plan-img">
+    <div class="plan-text">
+      <p>
+        Descubre la tranquilidad y la intimidad que ofrecen nuestros Jardines Familiares, donde cada lote nicho de 2 puestos está diseñado para honrar la memoria de sus seres queridos en un entorno sereno y natural. Rodeados de vegetación exuberante y coloridas flores, estos espacios permiten que las familias se reúnan para recordar y celebrar la vida en un ambiente de paz.
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="sec2">
+  <h1>Nuevos Osarios</h1>
+  <div class="plan-container">
+    <img src="../assets/images/lotefam_brillo1.jpg" class="plan-img">
+    <div class="plan-text">
+      <p>
+        Nuestros osarios son una opción digna y elegante para traslados y el descanso eterno del ser querido. Diseñados con un estilo contemporáneo la belleza del mármol y los detalles arquitectónicos crean un ambiente que invita a la contemplación, permitiendo que las familias honren a sus seres queridos en un lugar de paz y serenidad, donde sus memorias pueden perdurar para siempre.
+
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="sec2">
+  <h1>Panteones Familiares</h1>
+  <div class="plan-container">
+    <img src="../assets/images/panteon4.jpg" class="plan-img">
+    <div class="plan-text">
+      <p>
+        Nuestros Panteones Familiares son la opción perfecta para aquellos que desean mantener la unidad familiar incluso en el descanso eterno. Con espacios amplios y jardines privados, estos panteones ofrecen un ambiente exclusivo y acogedor para recordar y honrar a los seres queridos. Cada panteón está diseñado para ser un refugio de paz, donde las familias pueden compartir momentos de reflexión y cariño en un entorno que celebra la vida y la memoria de quienes han partido.
+
+
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="sec2">
+  <h1>Majestuosos Mausoleos</h1>
+  <div class="plan-container">
+    <img src="../assets/images/Maus_ident1.jpg" class="plan-img">
+    <div class="plan-text">
+      <p>
+        Los Mausoleos son la expresión máxima de elegancia y privacidad, pensados para aquellos que buscan un refugio exclusivo para sus seres queridos. Con un diseño único, moderno y minimalista, estos espacios ofrecen un ambiente sereno, rodeado de naturaleza y tranquilidad. Cada mausoleo destaca por sus acabados de lujo y la atención al detalle, creando un lugar donde las familias pueden reunirse en un entorno íntimo y digno, asegurando que el legado de sus seres queridos permanezca intacto.
+
+
+      </p>
+      
+    </div>
+  </div>
+</div>
+         
          
          
       
